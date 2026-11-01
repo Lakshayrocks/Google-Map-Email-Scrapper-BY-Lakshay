@@ -1,28 +1,20 @@
-# Google Maps Email Scraper by Lakshay 🚀
+# Maps Lead Finder v1.7 — Accurate Email Totals + PNG Icons
 
-A Chrome extension designed to simplify business lead generation by automatically collecting business information from Google Maps and discovering publicly available email addresses.
+## Email count fix
+The dashboard and Copy emails both call the same `getUniqueValidEmails()` function. It searches for individual email-address tokens anywhere inside each lead's email field, so a single row such as:
 
-### ✨ Features
-- **Auto Scroll & Auto Collect:** Automatically scrolls Google Maps search results and collects business listings.
-- **Business Lead Extraction:** Extracts business names, phone numbers, website URLs, addresses, and Google Maps links.
-- **Email Extraction:** Finds publicly available email addresses from Google Maps listings, business websites, and contact pages.
-- **Concurrent Email Scanning:** Scans multiple business websites simultaneously.
-- **Automatic Email Scanning:** Automatically queues newly collected leads for email discovery.
-- **Duplicate Removal:** Identifies and removes duplicate email addresses.
-- **Live Email Counter:** Displays the actual number of unique email addresses found.
-- **CSV Export:** Exports collected business leads and email addresses into CSV format.
+`ada.support@greyhound.com; group.sales@greyhound.com`
 
-### 🛠️ Built With
-- JavaScript
-- HTML5
-- CSS3
-- Chrome Extension APIs
-- Google Maps
+counts as **2 email addresses**. Duplicate addresses across different businesses count once. The dashboard refreshes when saved leads change, and the Copy action copies the same unique address list represented by the counter.
 
-### 👨‍💻 Developer
-**Lakshay**
+## New extension icons
+Custom PNG icons are included at 16x16, 32x32, 48x48, and 128x128, and are registered as the Chrome toolbar and extension icons.
 
-Built to make business lead collection and email discovery faster and easier.
+## Update safely
+1. Export your CSV backup.
+2. Extract the v1.7 ZIP.
+3. If you are using an unpacked extension, replace the files in the existing extension folder (including the `icons` folder), then click Reload at `chrome://extensions/`.
+4. Keep the same extension folder / extension ID to retain local saved leads. Loading this as a separate extension creates separate storage.
+5. Reopen the popup. The Emails found total should equal the number of unique addresses copied by Copy emails.
 
-### ⚠️ Disclaimer
-This extension is intended for legitimate business research and lead generation. It collects publicly available business contact information. Users are responsible for complying with applicable privacy laws, website terms, and anti-spam regulations.
+All existing collection and email scanning features are retained.

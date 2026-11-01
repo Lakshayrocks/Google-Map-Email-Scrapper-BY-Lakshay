@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maps Lead Finder</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><div class="logo">◎</div><div><h1>Maps Lead Finder</h1><p>Auto-collect listings & emails</p></div></header>
+  <section class="notice">Open a Google Maps search. Auto Collect will scroll the results panel and save each newly visible business automatically.</section>
+  <div class="stats"><div><strong id="count">0</strong><span>Leads saved</span></div><div><strong id="emails">0</strong><span>Emails found</span></div></div>
+  <button id="autoStart" class="primary">▶ Start Auto Collect & Scroll</button>
+  <button id="autoStop" class="danger">■ Stop Auto Collect</button>
+  <button id="collect">Collect visible listings once</button>
+  <button id="scan">Queue ALL saved leads + auto-scan new leads</button>
+  <div class="row"><button id="copy">Copy emails</button><button id="export">Export CSV</button></div>
+  <button id="clear" class="danger">Clear saved leads</button>
+  <p id="status" role="status">Ready. Open Google Maps to begin.</p>
+  <p class="foot">Use responsibly. Only collect public business contact details and follow website terms and applicable privacy / anti-spam laws.</p>
+  <script src="popup.js"></script>
+</body></html>
